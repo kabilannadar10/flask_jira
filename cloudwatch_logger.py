@@ -6,7 +6,7 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 # Log to EC2 (local file)
-file_handler = logging.FileHandler('/home/ubuntu/logs/app.log')
+file_handler = logging.FileHandler('/home/ubuntu/flask_jira/logs/app.log')
 file_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
 logger.addHandler(file_handler)
 
