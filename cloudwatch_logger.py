@@ -14,7 +14,6 @@ logger.addHandler(file_handler)
 logger.addHandler(watchtower.CloudWatchLogHandler(
     log_group="JiraLogs",
     stream_name="JiraStream",
-    boto3_session=boto3.Session()
 ))
 
 logger.info("Logging system initialized!")
