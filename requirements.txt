@@ -2,3 +2,26 @@ flask
 requests
 boto3
 watchtower
+python3
+pip3
+git
+
+# for cloudwatch agent
+wget https://amazoncloudwatch-agent.s3.amazonaws.com/ubuntu/amd64/latest/amazon-cloudwatch-agent.deb
+sudo systemctl start amazon-cloudwatch-agent
+
+# packages
+sudo apt install python-p
+sudo apt install python3-pip
+sudo apt install python3-requests
+sudo apt install python3-flask
+sudo apt install python3-boto3
+sudo apt-get install git
+
+# for watchtower if you face issues even after normally trying
+sudo apt install pipx -y
+pipx install watchtower
+pip install --break-system-packages watchtower
+
+# for cloning github repo to EC2
+git clone https://github.com/your-acoount-name/your-repo-name.git
