@@ -1,6 +1,10 @@
 import logging
 import watchtower
 import boto3
+import os
+
+AWS_REGION = os.getenv("AWS_REGION", "ap-south-1")
+boto3.setup_default_session(region_name=AWS_REGION)
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
