@@ -34,7 +34,13 @@ def create_jira_issue(payload):
             }
         })
 
-        response = requests.post(JIRA_URL, data=payload, headers=headers, auth=auth)
+        response = requests.request(
+            "POST",  # Specify the method
+            JIRA_URL, 
+            data=payload, 
+            headers=headers, 
+            auth=auth
+        )        
         created_issues.append(json.loads(response.text))
 
     return created_issues
