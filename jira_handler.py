@@ -5,9 +5,9 @@ from requests.auth import HTTPBasicAuth
 from jira_commands import COMMANDS_TO_JIRA
 
 API_TOKEN = os.getenv("API_TOKEN")
-auth = HTTPBasicAuth("r.r.kabilan0435@gmail.com", API_TOKEN)
+auth = HTTPBasicAuth("your_gmail", API_TOKEN)
 
-JIRA_URL = "https://kabilan10.atlassian.net/rest/api/3/issue"
+JIRA_URL = "https://your_account_name.atlassian.net/rest/api/3/issue"
 headers = {"Accept": "application/json", "Content-Type": "application/json"}
 
 def create_jira_issue(payload):
